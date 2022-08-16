@@ -1,8 +1,5 @@
-const nombre = prompt("¿Podrías indicarme tu nombre?");
-let saludo = "¡Hola," + " " + nombre + "!";
-alert (saludo);
-
-const pais = prompt("¿Podrías indicarme tu país?");
-const respuesta = "¡" + pais + "!" + " ¡Hermoso país!";
-alert (respuesta);
-alert ("¡Muchas gracias por responder!")
+let nombre = prompt("Ingrese su nombre, por favor");
+while (nombre != "ESC") {
+  alert("Usted a ingresado: " + nombre);
+  nombre = prompt("Ingrese otro nombre");
+}
