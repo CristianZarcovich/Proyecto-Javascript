@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+  background-color: #3a3a38;
+}
+
+.trimestres {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  background-color: blanchedalmond;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.inputs input {
+  border: 1px solid black;
+}
+
+.button {
+  padding: .5rem;
+  background-color: blanchedalmond;
+}
