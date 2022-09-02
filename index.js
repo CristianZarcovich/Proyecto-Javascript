@@ -1,16 +1,39 @@
-function calcularPromedio() {
-const notasPromedio = [];
-const nota1 = prompt("Ingrese nota del primer trimestre");
-const nota2 = prompt("Ingrese nota del segundo trimestre");
-const nota3 = prompt("Ingrese nota del tercer trimestre");
-notasPromedio.push(nota1, nota2, nota3);
-  const promedio = (parseInt(nota1) + parseInt(nota2) + parseInt(nota3)) / notasPromedio.length
-  let mensajePromocion = "No promociona."
+const alumnos = []
 
-  if (promedio >= 8){
-    mensajePromocion = "¡Felicidades, promocionaste!"
+function cargarAlumno() {
+  const alumno1 = {
+    notas: []
   }
-  alert("El promedio es " + promedio + ". " + mensajePromocion)
-} 
 
-calcularPromedio();
+  alumno1.nombre = document.getElementById("nombre").value;
+  alumno1.apellido = document.getElementById("apellido").value;
+  alumno1.edad = document.getElementById("edad").value;
+  alumno1.notas.push (document.getElementById("nota1").value);
+  alumno1.notas.push (document.getElementById("nota2").value);
+  alumno1.notas.push (document.getElementById("nota3").value);
+  alumno1.promedio = (parseInt(alumno1.notas[0]) + parseInt(alumno1.notas[1]) + parseInt(alumno1.notas[2])) / alumno1.notas.length
+
+  let mensaje = "Tu promedio es: " + alumno1.promedio + ". No promociona.";
+
+  if (isNaN(alumno1.promedio)) {
+    mensaje = "Por favor, ingrese todas las notas";
+  } else if (alumno1.promedio >= 8) {
+    mensaje = "Felicidades, promocionaste!" + " Tu promedio es: " + alumno1.promedio; 
+  } else if (alumno1.promdio >= 10) {
+    mensaje = "Ingrese valores correctos";
+  }
+
+  alert(mensaje);
+  
+  if (!isNaN(alumno1.promedio)) {
+    alumnos.push(alumno1)
+  }
+
+  imprimirAlumnoMayorPromedio();
+}
+
+function imprimirAlumnoMayorPromedio() {
+  const promedios = alumnos.map((alumno) => {return alumno.promedio});
+  const mayorPromedio = Math.max(...promedios);
+  console.log("El mayor promedio es: " + mayorPromedio)
+}
