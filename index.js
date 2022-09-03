@@ -1,7 +1,5 @@
 const alumnos = []
 
-const edad = prompt("Por favor, ingrese su edad");
-
 function cargarAlumno() {
   const alumno1 = {
     notas: []
@@ -9,7 +7,7 @@ function cargarAlumno() {
 
   alumno1.nombre = document.getElementById("nombre").value;
   alumno1.apellido = document.getElementById("apellido").value;
-  alumno1.edad = edad;
+  alumno1.edad = document.getElementById("edad").value;
   alumno1.notas.push (document.getElementById("nota1").value);
   alumno1.notas.push (document.getElementById("nota2").value);
   alumno1.notas.push (document.getElementById("nota3").value);
@@ -30,7 +28,7 @@ function cargarAlumno() {
   if (!isNaN(alumno1.promedio)) {
     alumnos.push(alumno1)
   }
-  console.log(alumno1);
+
   imprimirAlumnoMayorPromedio();
 }
 
