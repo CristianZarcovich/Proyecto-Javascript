@@ -41,3 +41,12 @@ body {
   margin: 2rem;
   cursor: pointer;
 }
+
+#contenedor {
+  display: flex;
+  flex-direction: column;
+  border: .2em dotted black;
+  padding: 1em;
+  gap: 1em;
+  margin-top: 1.5em;
+}

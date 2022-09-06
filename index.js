@@ -29,11 +29,31 @@ function cargarAlumno() {
     alumnos.push(alumno1)
   }
 
-  imprimirAlumnoMayorPromedio();
+  imprimirAlumnoconMayorPromedio();
 }
 
-function imprimirAlumnoMayorPromedio() {
-  const promedios = alumnos.map((alumno) => {return alumno.promedio});
-  const mayorPromedio = Math.max(...promedios);
-  console.log("El mayor promedio es: " + mayorPromedio)
+function retornarAlumnoMayorPromedio() {
+  let alumnoMayorPromedio;
+  let mayorPromedio = 0;
+  for (i = 0; i < alumnos.length; i++) { 
+    const alumno = alumnos[i]; 
+    if (alumno.promedio >= mayorPromedio) {
+      mayorPromedio = alumno.promedio;
+      alumnoMayorPromedio = alumno;
+    }
+  }
+
+  return alumnoMayorPromedio;
+}
+
+
+function imprimirAlumnoconMayorPromedio() {
+  const alumnoMayorPromedio = retornarAlumnoMayorPromedio();
+
+  const stringHTML = `<span>Nombre: ${alumnoMayorPromedio.apellido}, ${alumnoMayorPromedio.nombre}</span>
+  <span>Edad: ${alumnoMayorPromedio.edad}</span>
+  <span>Promedio: ${alumnoMayorPromedio.promedio}</span>
+  `
+  const contenedor = document.querySelector("#contenedor");
+  contenedor.innerHTML = stringHTML;
 }
