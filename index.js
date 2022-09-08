@@ -5,12 +5,12 @@ function cargarAlumno() {
     notas: []
   }
 
-  alumno1.nombre = document.getElementById("nombre").value;
-  alumno1.apellido = document.getElementById("apellido").value;
-  alumno1.edad = document.getElementById("edad").value;
-  alumno1.notas.push (document.getElementById("nota1").value);
-  alumno1.notas.push (document.getElementById("nota2").value);
-  alumno1.notas.push (document.getElementById("nota3").value);
+  alumno1.nombre = document.querySelector("#nombre").value;
+  alumno1.apellido = document.querySelector("#apellido").value;
+  alumno1.edad = document.querySelector("#edad").value;
+  alumno1.notas.push (document.querySelector("#nota1").value);
+  alumno1.notas.push (document.querySelector("#nota2").value);
+  alumno1.notas.push (document.querySelector("#nota3").value);
   alumno1.promedio = (parseInt(alumno1.notas[0]) + parseInt(alumno1.notas[1]) + parseInt(alumno1.notas[2])) / alumno1.notas.length
 
   let mensaje = "Tu promedio es: " + alumno1.promedio + ". No promociona.";

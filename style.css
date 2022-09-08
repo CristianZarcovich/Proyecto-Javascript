@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: #6e6e68;
+  background-color: white;
 }
 
 #ficha {
@@ -19,12 +19,27 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  color: blanchedalmond;
+  color: #78bac4;
 }
 
 .title {
   margin: 2rem;
   font-size: 2rem;
+}
+
+.ficha-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 5px 5px 14px -2px #000000; 
+  box-shadow: 5px 5px 14px -2px #000000;
+}
+
+
+h2 {
+  margin-top: 2em;
+  font-size: 1.5em;
 }
 
 #ficha label {
@@ -37,9 +52,11 @@ body {
 
 .button {
   padding: .5rem;
-  background-color: blanchedalmond;
+  background-color: #78bac4;
   margin: 2rem;
   cursor: pointer;
+  -webkit-box-shadow: 4px 4px 5px -2px #000000; 
+  box-shadow: 4px 4px 5px -2px #000000;
 }
 
 #contenedor {
