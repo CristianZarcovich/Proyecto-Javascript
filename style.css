@@ -10,7 +10,12 @@
 }
 
 body {
-  background-color: white;
+  width: 100%;
+  background: linear-gradient(320deg, rgba(255,255,255,1) 40%, rgba(120,186,196,1) 100%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
 }
 
 #ficha {
@@ -18,7 +23,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   color: #78bac4;
 }
 
@@ -32,10 +36,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  -webkit-box-shadow: 5px 5px 14px -2px #000000; 
-  box-shadow: 5px 5px 14px -2px #000000;
+  -webkit-box-shadow: 0px 0px 20px -2px #000000; 
+  box-shadow: 0px 0px 20px -2px #000000;
+  background: white;
+  width: 45em;
 }
-
 
 h2 {
   margin-top: 2em;
@@ -55,15 +60,51 @@ h2 {
   background-color: #78bac4;
   margin: 2rem;
   cursor: pointer;
-  -webkit-box-shadow: 4px 4px 5px -2px #000000; 
-  box-shadow: 4px 4px 5px -2px #000000;
+  color: white;
 }
 
-#contenedor {
+#rank {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  border: .2em dotted black;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.item {
+  width: 25em;
+  border: 1px solid black;
+  margin: .5em;
   padding: 1em;
-  gap: 1em;
-  margin-top: 1.5em;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 10px -2px #000000; 
+  box-shadow: 0px 0px 10px -2px #000000;
+}
+
+.form-control {
+  width: 40%;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: 0px 0px 0px 3px #78bac4; 
+  box-shadow: 0px 0px 0px 3px #78bac4;
+}
+
+.crown {
+  width: 20%;
+}
+
+.n1 {
+  width: 100%;
+  font-size: 1.2em;
+  background-color: #f3e887;
+}
+
+.n2 {
+  background-color: rgb(217, 222, 221);
+}
+
+.n3 {
+  background-color: #cd7f32;
 }
