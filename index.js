@@ -5,23 +5,23 @@ if (alumnosCache) {
   actualizarTabla()
 }
 
-// Imprime la tabla en el HTML
+
 function actualizarTabla() {
   const rank = document.querySelector("#rank");
-  rank.innerHTML = ""; // Reinicia para que no se vuelvan a cargar cada vez que se ejecuta la función
+  rank.innerHTML = ""; 
   const alumnosOrdenados = ordenarAlumnos(alumnos);
 
   alumnosOrdenados.forEach((alumno, index) => {
     let ficha = document.createElement("li")
     let className = "item rounded-3";
-    index == 0 ? className += " n1" : null;  // Agrega una clase extra al alumno con mayor promedio (elemento de la tabla (index 0))
+    index == 0 ? className += " n1" : null;  
     index == 1 ? className += " n2" : null;
     index == 2 ? className += " n3" : null;
     ficha.className = className;
-    const {nombre, apellido, edad, promedio} = alumno
+    const {nombre, apellido, edad} = alumno
     ficha.innerHTML = `Nombre: ${nombre}, ${apellido}</br>
     Edad: ${edad}</br>
-    Promedio: ${promedio.toFixed(2)}</br>
+    Promedio: ${alumno?.promedio.toFixed(2)}</br>
     `
     rank.append(ficha);
     })
