@@ -91,4 +91,42 @@ function cargarAlumno() {
   }
 
   actualizarTabla();
+
+  if (!isNaN(alumno.promedio)) {
+  Toastify({
+      text: "Alumno cargado exitosamente",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", 
+      position: "center",
+      stopOnFocus: true,
+      offset: {
+        x: 50,
+        y: 50
+      },
+      style: {
+        background: "#78bac4",
+        fontSize: "1.5em"
+      },
+    }).showToast();
+  } else {
+    Toastify({
+      text: "Ficha incompleta",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top", 
+      position: "center",
+      stopOnFocus: true,
+      offset: {
+        x: 50,
+        y: 50
+      },
+      style: {
+        background: "#f57474",
+        fontSize: "1.5em"
+      },
+    }).showToast();
+  }
 }
