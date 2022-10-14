@@ -83,8 +83,8 @@ class Alumno {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        'X-RapidAPI-Key': '0e4d12bdd9mshce3175142db6f67p1460a3jsnc1f87ae8918c',
-        'X-RapidAPI-Host': 'rapidprod-sendgrid-v1.p.rapidapi.com'
+        'X-RapidAPI-Key': '',
+        'X-RapidAPI-Host': ''
       },
       body: `{"personalizations":[{"to":[{"email":"${this.email}"}],"subject":"Promedio de alumno"}],"from":{"email":"cristian.zarcovich@gmail.com"},"content":[{"type":"text/plain","value":"${bodyEmail}"}]}`
     };
